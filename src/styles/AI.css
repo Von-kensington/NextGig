@@ -1,0 +1,38 @@
+/* AiPage.css */
+.paywall,
+.ai-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.paywall h1,
+.ai-page h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.paywall p,
+.ai-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

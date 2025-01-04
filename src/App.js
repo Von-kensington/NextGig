@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Navbar from './components/NavBar';
 import AiPage from './pages/AIPage';
+import PricingPage from './pages/PricingPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
         <Route path="/AI" element={<AiPage isPaidUser={true} />} />
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/jobs/:jobId" element={<JobDetailsPage />} />
