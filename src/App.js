@@ -1,22 +1,26 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import CommunityPage from './pages/CommunityPage';
+import JobsPage from './pages/JobsPage';
+import JobDetailsPage from './pages/JobDetailsPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import Navbar from './components/NavBar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and  to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Community" element={<CommunityPage />} />
+        <Route path="/Jobs" element={<JobsPage />} />
+        <Route path="/JobDetails" element={<JobDetailsPage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Signup" element={<SignupPage />} />
+      </Routes>
+    </Router>
   );
 }
 
