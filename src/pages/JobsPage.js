@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Jobs.css'; // Add styles here
 
 const JobsPage = () => {
     const [jobs, setJobs] = useState([]);
     const [search, setSearch] = useState('');
+    const navigate = useNavigate();
 
     // Mock data for now (replace with API later)
     const mockJobs = [
@@ -43,7 +45,7 @@ const JobsPage = () => {
                         <p><strong>Company:</strong> {job.company}</p>
                         <p><strong>Location:</strong> {job.location}</p>
                         <p><strong>Type:</strong> {job.type}</p>
-                        <button className="btn-primary">View Details</button>
+                        <button className="btn-primary" onClick={() => navigate(`/jobs/${job.id}`)}>View Details</button>
                     </div>
                 ))}
                 {filteredJobs.length === 0 && <p>No jobs found</p>}
